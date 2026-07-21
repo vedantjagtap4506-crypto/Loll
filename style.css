@@ -7,13 +7,14 @@ box-sizing:border-box;
 body{
 font-family:'Poppins',sans-serif;
 background:linear-gradient(180deg,#02030d,#091633,#12234f);
-overflow:hidden;
-height:100vh;
+overflow-x:hidden;
+overflow-y:auto;
+min-height:100vh;
 color:white;
 }
 
 .hero{
-height:100vh;
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
