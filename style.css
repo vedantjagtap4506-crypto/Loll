@@ -17,9 +17,9 @@ color:white;
 min-height:100vh;
 display:flex;
 justify-content:center;
-align-items:center;
+align-items:flex-start;
 text-align:center;
-padding:30px;
+padding:80px 30px 40px;
 position:relative;
 z-index:5;
 }
