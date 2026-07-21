@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For You ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:Poppins,sans-serif;
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+background:
+radial-gradient(circle at top,#2d4fa3 0%,#11142b 40%,#050814 100%);
+
+position:relative;
+
+}
+
+/* Stars */
+
+.stars{
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+radial-gradient(2px 2px at 20px 30px,#fff,transparent),
+
+radial-gradient(2px 2px at 180px 120px,#fff,transparent),
+
+radial-gradient(1.5px 1.5px at 330px 80px,#fff,transparent),
+
+radial-gradient(2px 2px at 550px 250px,#fff,transparent),
+
+radial-gradient(2px 2px at 700px 180px,#fff,transparent),
+
+radial-gradient(1.5px 1.5px at 900px 90px,#fff,transparent),
+
+radial-gradient(2px 2px at 1100px 240px,#fff,transparent);
+
+background-size:1200px 700px;
+
+animation:starsMove 90s linear infinite;
+
+opacity:.9;
+
+}
+
+@keyframes starsMove{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-120px);
+
+}
+
+}
+
+/* Moon */
+
+.moon{
+
+position:absolute;
+
+top:-30px;
+
+right:-30px;
+
+width:130px;
+
+height:130px;
+
+border-radius:50%;
+
+background:#fff;
+
+box-shadow:
+
+0 0 30px #fff,
+
+0 0 60px rgba(255,255,255,.8),
+
+0 0 120px rgba(255,255,255,.35);
+
+}
+
+/* Floating Hearts */
+
+.hearts{
+
+position:absolute;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+}
+
+.heart{
+
+position:absolute;
+
+bottom:-40px;
+
+font-size:20px;
+
+animation:floatUp linear infinite;
+
+opacity:.8;
+
+}
+
+.heart:nth-child(1){
+
+left:10%;
+
+animation-duration:10s;
+
+}
+
+.heart:nth-child(2){
+
+left:30%;
+
+animation-duration:12s;
+
+font-size:28px;
+
+}
+
+.heart:nth-child(3){
+
+left:55%;
+
+animation-duration:9s;
+
+}
+
+.heart:nth-child(4){
+
+left:75%;
+
+animation-duration:13s;
+
+}
+
+.heart:nth-child(5){
+
+left:90%;
+
+animation-duration:11s;
+
+}
+
+@keyframes floatUp{
+
+0%{
+
+transform:translateY(0) scale(.6);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-120vh) scale(1.2);
+
+opacity:0;
+
+}
+
+}
+
+/* Glass Card */
+
+.card{
+
+position:relative;
+
+z-index:5;
+
+width:90%;
+
+max-width:760px;
+
+padding:50px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.2);
+
+box-shadow:
+
+0 0 45px rgba(255,105,180,.25),
+
+0 20px 60px rgba(0,0,0,.35);
+
+text-align:center;
+
+animation:cardAppear 1.2s ease;
+
+color:white;
+
+}
+
+@keyframes cardAppear{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px) scale(.95);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0) scale(1);
+
+}
+
+}
+
+h1{
+
+font-family:"Great Vibes",cursive;
+
+font-size:68px;
+
+margin-bottom:30px;
+
+color:#ffd5ea;
+
+text-shadow:0 0 20px rgba(255,170,210,.8);
+
+}
+
+.fade{
+
+opacity:0;
+
+animation:show .9s forwards;
+
+}
+
+.fade:nth-of-type(1){animation-delay:.8s;}
+.fade:nth-of-type(2){animation-delay:2s;}
+.fade:nth-of-type(3){animation-delay:3.2s;}
+.fade:nth-of-type(4){animation-delay:4.5s;}
+
+@keyframes show{
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+}
+
+p{
+
+transform:translateY(20px);
+
+font-size:21px;
+
+line-height:2;
+
+margin-bottom:18px;
+
+}
+
+button{
+
+margin-top:35px;
+
+padding:18px 40px;
+
+font-size:20px;
+
+border:none;
+
+border-radius:50px;
+
+cursor:pointer;
+
+background:linear-gradient(135deg,#ff5fa2,#ff8ec2);
+
+color:white;
+
+font-weight:600;
+
+box-shadow:
+0 0 20px #ff5fa2,
+0 0 45px rgba(255,105,180,.9);
+
+animation:pulse 2s infinite;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.07);
+
+box-shadow:0 0 40px rgba(255,105,180,1);
+
+}
+
+@keyframes pulse{
+
+0%{transform:scale(1);}
+
+50%{transform:scale(1.05);}
+
+100%{transform:scale(1);}
+
+}
+
+.quote{
+
+margin-top:30px;
+
+font-style:italic;
+
+color:#ffe4ef;
+
+opacity:0;
+
+animation:show .8s forwards;
+
+animation-delay:6s;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="moon"></div>
+
+<div class="hearts">
+
+<div class="heart">💖</div>
+
+<div class="heart">❤️</div>
+
+<div class="heart">💗</div>
+
+<div class="heart">💕</div>
+
+<div class="heart">💞</div>
+
+</div>
+
+<div class="card">
+
+<h1>Yashika... ❤️</h1>
+
+<p class="fade">
+We've already chosen each other...
+</p>
+
+<p class="fade">
+But I've never asked you the way I've always wanted to.
+</p>
+
+<p class="fade">
+So today, on your birthday... I just want to ask you something from the bottom of my heart.
+</p>
+
+<p class="fade">
+Because no matter what tomorrow brings... I know I want you to be a part of it.
+</p>
+
+<p class="fade">
+Will you let me keep choosing you, making you smile, and loving you a little more every single day?
+</p>
+
+<button onclick="location.href='page7.html'">
+💖 Yes, Forever ❤️
+</button>
+
+<div class="quote">
+"And if I had to choose again... I'd still choose you." ❤️
+</div>
+
+</div>
+
+</body>
+
+</html>

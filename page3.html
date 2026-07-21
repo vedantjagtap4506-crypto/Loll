@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Little Story 😁</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:linear-gradient(#05081d,#182b66);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+overflow:hidden;
+color:white;
+}
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+background:url("https://www.transparenttextures.com/patterns/stardust.png");
+opacity:.35;
+animation:move 60s linear infinite;
+}
+
+@keyframes move{
+from{background-position:0 0;}
+to{background-position:1000px 1000px;}
+}
+
+.card{
+position:relative;
+z-index:2;
+background:white;
+color:#333;
+width:90%;
+max-width:720px;
+padding:40px;
+border-radius:25px;
+box-shadow:0 0 35px rgba(255,255,255,.2);
+animation:fade .8s ease;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+h1{
+font-family:"Great Vibes",cursive;
+font-size:52px;
+text-align:center;
+color:#ff4f95;
+margin-bottom:25px;
+}
+
+p{
+font-size:19px;
+line-height:1.9;
+margin-bottom:18px;
+text-align:center;
+}
+
+.quote{
+margin-top:20px;
+font-style:italic;
+color:#888;
+text-align:center;
+}
+
+button{
+margin-top:30px;
+width:100%;
+padding:18px;
+border:none;
+border-radius:40px;
+background:#ff4f95;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="card">
+
+<h1>Our Little Story 😁</h1>
+
+<p>
+Sometimes life introduces us to someone when we least expect it.
+</p>
+
+<p>
+We started talking because of a mutual, and honestly... I never imagined those conversations would become my favorite part of the day.
+</p>
+
+<p>
+In just four days, you somehow became someone incredibly important to me.
+</p>
+
+<p>
+We may not have met in person yet, but somehow you've already found a place in my heart.
+</p>
+
+<p>
+No matter how many miles are between us, I'm grateful that life brought you into mine.
+</p>
+
+<div class="quote">
+"Some people take years to become special. You did it in few days. ❤️"
+</div>
+
+<button onclick="location.href='page4.html'">
+📖 Turn the Page
+</button>
+
+</div>
+
+</body>
+</html>
